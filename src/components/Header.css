@@ -1,0 +1,9 @@
+.level:not(:last-child) {
+  margin-bottom: 0px;
+  padding: 10px;
+}
+.level-item {
+  color: white;
+  font-size: 14px;
+  justify-content: left;
+}

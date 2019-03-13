@@ -1,0 +1,28 @@
+.columns.is-gapless>.column {
+  margin-bottom: -5px;
+}
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: 0px;
+}
+.custom-image:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+@media screen and (min-width: 769px) {
+  .modal-card, .modal-content {
+    margin: 0 auto;
+    max-height: calc(100vh - 40px);
+    width: 60%;
+  }
+}
+
+.load-fadeIn {
+  visibility: visible;
+  opacity: 1;
+}
+
+.load-hidden {
+  visibility: 'hidden';
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
