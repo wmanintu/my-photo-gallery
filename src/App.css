@@ -2,7 +2,7 @@
   text-align: center;
 }
 ul {
-  columns: 400px;
+  columns: 300px;
   break-inside: avoid;
   padding: 0;
   column-gap: 0;
