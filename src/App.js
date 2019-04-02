@@ -8,14 +8,13 @@ class App extends Component {
     super(props)
     this.state = {
       imgurUrl: 'https://imgur.com/',
-      columnHori: [
-        'cNL1wN2', 'KETNjDo', 'fcCymkA', 'kq7ppN4',
-        'JVZONyU', '4M3IXzx', '6iEKkYL', 'bqwwZ9A',
-        'OuVHBI6', 'OyZEcok', 'cXpigjf', 'ItXAhWu',
-        'eJqQFbx', 'plGafHT', 'Fo4QCKz', 'E6Of2sM',
+      images: [
+        'cNL1wN2', 'KETNjDo', 'fcCymkA', 'kq7ppN4', 'saKHloY',
+        'JVZONyU', '4M3IXzx', '6iEKkYL', 'bqwwZ9A', 'sJSazUZ',
+        'OuVHBI6', 'OyZEcok', 'cXpigjf', 'ItXAhWu', 'bG60tGT',
+        'eJqQFbx', 'plGafHT', 'Fo4QCKz', 'E6Of2sM', 'Rir88ZI',
         '5j7QTSe', 'cTZYMhr', 'zyHCjAb', 'f7Qrgq5'
       ],
-      columnVert: ['saKHloY', 'sJSazUZ', 'bG60tGT', 'Rir88ZI'],
       modal: 'modal',
       currentImgId: ''
     }
@@ -31,17 +30,13 @@ class App extends Component {
     })
   }
   render() {
-    const columnHori = this.state.columnHori.map((imgId, index) => <ImageD imgId={imgId} key={index} open={this.open} />)
-    const columnVert = this.state.columnVert.map((imgId, index) => <ImageD imgId={imgId} key={index} open={this.open}/>)
+    const imageList = this.state.images.map((imgId, index) => <ImageD imgId={imgId} key={index} open={this.open}/>)
     return (
       <div className="App">
         <Header />
-        <div className="columns is-gapless is-multiline">
-          {columnHori}
-        </div>
-        <div className="columns is-gapless is-multiline">
-          {columnVert}
-        </div>
+        <ul>
+          {imageList}
+        </ul>
         <div className={this.state.modal}>
           <div className="modal-background"></div>
           <div className="modal-content">

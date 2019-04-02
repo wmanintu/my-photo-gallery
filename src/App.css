@@ -1,3 +1,18 @@
 .App {
   text-align: center;
 }
+ul {
+  columns: 400px;
+  break-inside: avoid;
+  padding: 0;
+  column-gap: 0;
+}
+li {
+  list-style-type:none;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  margin-top: 0px;
+}

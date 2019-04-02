@@ -17,7 +17,7 @@ class Image extends Component {
   render() {
     const imagClassName = this.state.didLoad ? 'custom-image load-fadeIn' : 'custom-image load-hidden'
     return (
-      <div className="column is-one-quarter-desktop is-one-third-tablet">
+      <li>
         <img
           className={imagClassName}
           src={`https://i.imgur.com/${this.props.imgId}.jpg`}
@@ -25,7 +25,7 @@ class Image extends Component {
           value={this.props.imgId}
           onLoad={this.onLoad}
           onClick={(e) => this.props.open(e, this.props.imgId)} />
-      </div>
+      </li>
     )
   }
 }
